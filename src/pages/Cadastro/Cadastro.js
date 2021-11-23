@@ -46,32 +46,31 @@ const Cadastro = (props) => {
             <div className="row">
               <div className="col">
                 <div className="form-floating mb-3">
-                  <input type="text" className="form-control" name="titulo" id="floatingInput" placeholder="Digite o Titulo"/>
-                  <label htmlFor="floatingInput">Titulo</label>
+                  <input type="text" className="form-control" name="nome" id="floatingInput" placeholder="Digite o nome"/>
+                  <label htmlFor="floatingInput">Nome</label>
                 </div>
               </div>
               <div className="col">
                 <div className="form-floating">
-                  <input type="text" className="form-control" name="salario" id="floatingsalario" placeholder="Digite o Salario"/>
-                  <label htmlFor="floatingsalario">Salario</label>
+                  <input type="text" className="form-control" name="lancamento" id="floatingsalario" placeholder="Digite a data de lançamento"/>
+                  <label htmlFor="floatingsalario">Lançamento</label>
                 </div>
               </div>
             </div>
             <div className="row">
               <div className="col">
                 <div className="form-floating mb-3">
-                  <input type="text" className="form-control" name="descricao" id="floatingInput" placeholder="Digite a Descricao"/>
-                  <label htmlFor="floatingInput">Descricao</label>
+                  <input type="text" className="form-control" name="desenvolvedora" id="floatingInput" placeholder="Digite o nome da empresa desenvolvedora"/>
+                  <label htmlFor="floatingInput">Desenvolvedora</label>
                 </div>
               </div>
               <div className="col">
                 <div className="form-floating">
-                  <select className="form-control" name="senioridade" id="floatingsenioridade" placeholder="Digite a Senioridade">
-                    <option value="junior">Junior</option>
-                    <option value="pleno">Pleno</option>
-                    <option value="pleno">Senior</option>
+                  <select className="form-control" name="tipo" id="floatingsenioridade" placeholder="Digite o tipo">
+                    <option value="multi">Multiplayer</option>
+                    <option value="single">Singleplayer</option>
                   </select>
-                  <label htmlFor="floatingsenioridade">Senioridade</label>
+                  <label htmlFor="floatingsenioridade">Tipo</label>
                 </div>
               </div>
             </div>

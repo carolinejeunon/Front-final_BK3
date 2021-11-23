@@ -1,23 +1,23 @@
 const Api = {
-  apiUrl: 'http://localhost:3001/vagas',
+  apiUrl: 'https://projeto03-blue.herokuapp.com/acao',
   fetchGetAll: () => fetch(Api.apiUrl),
   fetchGetById: id => fetch(`${Api.apiUrl}/${id}`),
-  fetchPost: (vaga) => {
+  fetchPost: (acao) => {
     return fetch(`${Api.apiUrl}/add`, {
       method: 'POST',
       headers: new Headers({
         "Content-Type": "application/json",
       }),
-      body: JSON.stringify(vaga)
+      body: JSON.stringify(acao)
     })
   },
-  fetchPut: (vaga, id) => {
+  fetchPut: (acao, id) => {
     return fetch(`${Api.apiUrl}/update/${id}`, {
       method: 'PUT',
       headers: new Headers({
         "Content-Type": "application/json",
       }),
-      body: JSON.stringify(vaga)
+      body: JSON.stringify(acao)
     })
   },
   fetchDelete: (id) => {
