@@ -94,7 +94,7 @@ const Edicao = (props) => {
                     type="text"
                     value={vaga.desenvolvedora}
                     className="form-control"
-                    name="descricao"
+                    name="desenvolvedora"
                     id="floatingInput"
                     placeholder="Digite a empresa desenvolvedora"
                     onChange={handleFieldsChange}
