@@ -17,6 +17,7 @@ const Edicao = (props) => {
     const response = await Api.fetchGetById(_id);
     const result = await response.json();
     // atualizo o meu estado de acordo com o resultado.
+    console.log(result);
     setVaga(result);
   };
 
@@ -103,29 +104,29 @@ const Edicao = (props) => {
                 </div>
               </div>
               <div className="row">
-              <div className="col">
-                <div className="form-floating mb-3">
-                  <input
-                    type="text"
-                    value={vaga.tipo}
-                    className="form-control"
-                    name="tipo"
-                    id="floatingInput"
-                    placeholder="Digite o tipo"
-                    onChange={handleFieldsChange}
-                  />
-                  <label htmlFor="floatingInput">Tipo</label>
+                <div className="col">
+                  <div className="form-floating mb-3">
+                    <input
+                      type="text"
+                      value={vaga.tipo}
+                      className="form-control"
+                      name="tipo"
+                      id="floatingInput"
+                      placeholder="Digite o tipo"
+                      onChange={handleFieldsChange}
+                    />
+                    <label htmlFor="floatingInput">Tipo</label>
+                  </div>
                 </div>
               </div>
+              <div className="row">
+                <div className="col">
+                  <button className="btn btn-success" type="submit">
+                    Enviar
+                  </button>
+                  <button className="btn btn-outline-default">Voltar</button>
+                </div>
               </div>
-            <div className="row">
-              <div className="col">
-                <button className="btn btn-success" type="submit">
-                  Enviar
-                </button>
-                <button className="btn btn-outline-default">Voltar</button>
-              </div>
-            </div>
             </div>
           </form>
         </div>
