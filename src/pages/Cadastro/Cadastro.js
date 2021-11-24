@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './Cadastro.css';
 import Api from '../../api/api';
 
@@ -8,7 +8,7 @@ const Cadastro = (props) => {
   const handleSubmit = async (evento) => {
     evento.preventDefault();
     // pego o valor que usuario digitou nos inputs
-    const titulo = evento.target.titulo.value; 
+    const titulo = evento.target.titulo.value;
     const salario = evento.target.salario.value;
     const descricao = evento.target.descricao.value;
     const senioridade = evento.target.senioridade.value;
@@ -17,19 +17,18 @@ const Cadastro = (props) => {
       titulo,
       salario: parseInt(salario),
       descricao,
-      senioridade
-    }
-    
+      senioridade,
+    };
+
     try {
-      const response = await Api.fetchPost(vaga)
+      const response = await Api.fetchPost(vaga);
       const result = await response.json();
       alert(result.message);
       history.push('/'); // forca o historico a voltar para a rota de / => home
-    } catch(error) {
+    } catch (error) {
       console.log(error);
     }
-    
-  }
+  };
 
   return (
     <div className="container cadastro">
@@ -46,13 +45,25 @@ const Cadastro = (props) => {
             <div className="row">
               <div className="col">
                 <div className="form-floating mb-3">
-                  <input type="text" className="form-control" name="nome" id="floatingInput" placeholder="Digite o nome"/>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="nome"
+                    id="floatingInput"
+                    placeholder="Digite o nome"
+                  />
                   <label htmlFor="floatingInput">Nome</label>
                 </div>
               </div>
               <div className="col">
                 <div className="form-floating">
-                  <input type="text" className="form-control" name="lancamento" id="floatingsalario" placeholder="Digite a data de lançamento"/>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="lancamento"
+                    id="floatingsalario"
+                    placeholder="Digite a data de lançamento"
+                  />
                   <label htmlFor="floatingsalario">Lançamento</label>
                 </div>
               </div>
@@ -60,29 +71,44 @@ const Cadastro = (props) => {
             <div className="row">
               <div className="col">
                 <div className="form-floating mb-3">
-                  <input type="text" className="form-control" name="desenvolvedora" id="floatingInput" placeholder="Digite o nome da empresa desenvolvedora"/>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="desenvolvedora"
+                    id="floatingInput"
+                    placeholder="Digite o nome da empresa desenvolvedora"
+                  />
                   <label htmlFor="floatingInput">Desenvolvedora</label>
                 </div>
               </div>
               <div className="row">
-              <div className="col">
-                <div className="form-floating mb-3">
-                  <input type="text" className="form-control" name="tipo" id="floatingInput" placeholder="Digite o do jogo"/>
-                  <label htmlFor="floatingInput">Tipo</label>
+                <div className="col">
+                  <div className="form-floating mb-3">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="tipo"
+                      id="floatingInput"
+                      placeholder="Digite o do jogo"
+                    />
+                    <label htmlFor="floatingInput">Tipo</label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col">
-                <button className="btn btn-success" type="submit">Enviar</button>
-                <button className="btn btn-outline-default">Voltar</button>
+              <div className="row">
+                <div className="col">
+                  <button className="btn btn-success" type="submit">
+                    Enviar
+                  </button>
+                  <button className="btn btn-outline-default">Voltar</button>
+                </div>
               </div>
             </div>
           </form>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cadastro
+export default Cadastro;
