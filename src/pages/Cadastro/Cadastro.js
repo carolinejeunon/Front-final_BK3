@@ -37,7 +37,7 @@ const Cadastro = (props) => {
         <div className="card-title">
           <div className="row">
             <div className="col">
-              <h3>Cadastro de Vagas</h3>
+              <h3>Cadastro de Jogos</h3>
             </div>
           </div>
         </div>
@@ -77,6 +77,7 @@ const Cadastro = (props) => {
                 <button className="btn btn-success" type="submit">Enviar</button>
                 <button className="btn btn-outline-default">Voltar</button>
               </div>
+            </div>
             </div>
           </form>
         </div>
