@@ -8,10 +8,12 @@ const Cadastro = (props) => {
   const handleSubmit = async (evento) => {
     evento.preventDefault();
     // pego o valor que usuario digitou nos inputs
-    const nome = evento.target.nome;
-    const lancamento = evento.target.lancamento;
-    const desenvolvedora = evento.target.desenvolvedora;
-    const tipo = evento.target.tipo;
+    const nome = evento.target.nome.value;
+    const lancamento = evento.target.lancamento.value;
+    const desenvolvedora = evento.target.desenvolvedora.value;
+    const tipo = evento.target.tipo.value;
+
+    console.log('teste');
 
     const vaga = {
       nome,

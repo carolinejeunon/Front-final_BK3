@@ -17,6 +17,7 @@ const Edicao = (props) => {
     const response = await Api.fetchGetById(_id);
     const result = await response.json();
     // atualizo o meu estado de acordo com o resultado.
+    console.log(response);
     console.log(result);
     setVaga(result);
   };
