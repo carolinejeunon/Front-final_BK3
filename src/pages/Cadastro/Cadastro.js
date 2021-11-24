@@ -8,16 +8,16 @@ const Cadastro = (props) => {
   const handleSubmit = async (evento) => {
     evento.preventDefault();
     // pego o valor que usuario digitou nos inputs
-    const titulo = evento.target.titulo.value;
-    const salario = evento.target.salario.value;
-    const descricao = evento.target.descricao.value;
-    const senioridade = evento.target.senioridade.value;
+    const nome = evento.target.nome;
+    const lancamento = evento.target.lancamento;
+    const desenvolvedora = evento.target.desenvolvedora;
+    const tipo = evento.target.tipo;
 
     const vaga = {
-      titulo,
-      salario: parseInt(salario),
-      descricao,
-      senioridade,
+      nome,
+      lancamento,
+      desenvolvedora,
+      tipo,
     };
 
     try {
