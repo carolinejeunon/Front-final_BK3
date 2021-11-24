@@ -3,7 +3,7 @@ const Api = {
   fetchGetAll: () => fetch(`${Api.apiUrl}/listall`),
   fetchGetById: (id) => fetch(`${Api.apiUrl}/listid/${id}`),
   fetchPost: (acao) => {
-    return fetch(`${Api.apiUrl}/create`, {
+    return fetch(`${Api.apiUrl}/add`, {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json',
