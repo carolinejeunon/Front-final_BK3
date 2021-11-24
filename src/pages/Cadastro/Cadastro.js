@@ -64,13 +64,11 @@ const Cadastro = (props) => {
                   <label htmlFor="floatingInput">Desenvolvedora</label>
                 </div>
               </div>
+              <div className="row">
               <div className="col">
-                <div className="form-floating">
-                  <select className="form-control" name="tipo" id="floatingsenioridade" placeholder="Digite o tipo">
-                    <option value="multi">Multiplayer</option>
-                    <option value="single">Singleplayer</option>
-                  </select>
-                  <label htmlFor="floatingsenioridade">Tipo</label>
+                <div className="form-floating mb-3">
+                  <input type="text" className="form-control" name="tipo" id="floatingInput" placeholder="Digite o do jogo"/>
+                  <label htmlFor="floatingInput">Tipo</label>
                 </div>
               </div>
             </div>
