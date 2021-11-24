@@ -6,7 +6,7 @@ import { Modal } from 'react-responsive-modal';
 
 const VagaView = (props) => {
   const _id = props.match.params.id;
-  const [acao, setVaga] = useState({});
+  const [game, setGame] = useState({});
   const [open, setOpen] = useState(false);
 
   const onOpenModal = () => setOpen(true);
@@ -14,12 +14,14 @@ const VagaView = (props) => {
 
   useEffect(() => {
     getVagaById();
-  });
+  }, []);
 
   const getVagaById = async () => {
     const response = await Api.fetchGetById(_id);
     const result = await response.json();
-    setVaga(result);
+    console.log(result);
+    setGame(result);
+    console.log(game.nome);
   };
 
   const handleDelete = async (evento) => {
@@ -34,12 +36,12 @@ const VagaView = (props) => {
     <div className="container flex-grow-1">
       <div className="row">
         <div className="col">
-          <h1 className="text-center mt-4">{acao.nome}</h1>
-          <h2 className="text-center">{acao.lancamento}</h2>
-          <h4 className="text-center">{acao.desenvolvedora}</h4>
-          <h5 className="text-center">{acao.tipo}</h5>
+          <h1 className="text-center mt-4">{game.nome}</h1>
+          <h2 className="text-center">{game.lancamento}</h2>
+          <h4 className="text-center">{game.desenvolvedora}</h4>
+          <h5 className="text-center">{game.tipo}</h5>
           <div className="btn-group mt-3 w-100 d-flex align-items-center justify-content-center">
-            <Link to={`/update/${acao._id}`} className="btn btn-outline-info">
+            <Link to={`/update/${game._id}`} className="btn btn-outline-info">
               Editar
             </Link>
             <button className="btn btn-outline-danger" onClick={onOpenModal}>
