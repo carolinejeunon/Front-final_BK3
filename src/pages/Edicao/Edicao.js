@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Api from "../../api/api";
+import React, { useEffect, useState } from 'react';
+import Api from '../../api/api';
 
 const Edicao = (props) => {
   const _id = props.match.params.id;
@@ -35,12 +35,11 @@ const Edicao = (props) => {
     // faco uma copia do estado com obj atualizado.
     const vagaObj = { ...vaga };
     // transforma o salario em inteiro.
-    vagaObj.salario = parseInt(vagaObj.salario);
     try {
       const response = await Api.fetchPut(vagaObj, _id);
       const result = await response.json();
       alert(result.message);
-      history.push("/"); // forca o historico a voltar para a rota de / => home
+      history.push('/'); // forca o historico a voltar para a rota de / => home
     } catch (error) {
       console.log(error);
     }
@@ -52,7 +51,7 @@ const Edicao = (props) => {
         <div className="card-title">
           <div className="row">
             <div className="col">
-              <h3>Edicao da Vagaa</h3>
+              <h3>Edicao do jogo</h3>
             </div>
           </div>
         </div>
@@ -63,11 +62,11 @@ const Edicao = (props) => {
                 <div className="form-floating mb-3">
                   <input
                     type="text"
-                    value={vaga.titulo}
+                    value={vaga.nome}
                     className="form-control"
-                    name="titulo"
+                    name="nome"
                     id="floatingInput"
-                    placeholder="Digite o Titulo"
+                    placeholder="Digite o Nome"
                     onChange={handleFieldsChange}
                   />
                   <label htmlFor="floatingInput">Titulo</label>
@@ -105,13 +104,14 @@ const Edicao = (props) => {
               </div>
               <div className="col">
                 <div className="form-floating">
-                  <select value={vaga.senioridade}
+                  <select
+                    value={vaga.senioridade}
                     className="form-control"
                     name="senioridade"
                     id="floatingsenioridade"
                     value={vaga.senioridade}
                     onChange={handleFieldsChange}
-                    >
+                  >
                     <option value="junior">Junior</option>
                     <option value="pleno">pleno</option>
                     <option value="senior">senior</option>
