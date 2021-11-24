@@ -1,7 +1,7 @@
 const Api = {
   apiUrl: 'https://projeto03-blue.herokuapp.com/acao',
   fetchGetAll: () => fetch(`${Api.apiUrl}/listall`),
-  fetchGetSingle: (id) => fetch(`${Api.apiUrl}/listid/${id}`),
+  fetchGetById: (id) => fetch(`${Api.apiUrl}/listid/${id}`),
   fetchPost: (acao) => {
     return fetch(`${Api.apiUrl}/create`, {
       method: 'POST',
