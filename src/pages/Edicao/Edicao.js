@@ -76,14 +76,14 @@ const Edicao = (props) => {
                 <div className="form-floating">
                   <input
                     type="text"
-                    value={vaga.salario}
+                    value={vaga.lancamento}
                     className="form-control"
-                    name="salario"
+                    name="lancamento"
                     id="floatingsalario"
-                    placeholder="Digite o Salario"
+                    placeholder="Digite a data de lançamento"
                     onChange={handleFieldsChange}
                   />
-                  <label htmlFor="floatingsalario">Salario</label>
+                  <label htmlFor="floatingsalario">Lançamento</label>
                 </div>
               </div>
             </div>
@@ -92,34 +92,32 @@ const Edicao = (props) => {
                 <div className="form-floating mb-3">
                   <input
                     type="text"
-                    value={vaga.descricao}
+                    value={vaga.desenvolvedora}
                     className="form-control"
                     name="descricao"
                     id="floatingInput"
-                    placeholder="Digite a Descricao"
+                    placeholder="Digite a empresa desenvolvedora"
                     onChange={handleFieldsChange}
                   />
-                  <label htmlFor="floatingInput">Descricao</label>
+                  <label htmlFor="floatingInput">Desenvolvedora</label>
                 </div>
               </div>
+              <div className="row">
               <div className="col">
-                <div className="form-floating">
-                  <select
-                    value={vaga.senioridade}
+                <div className="form-floating mb-3">
+                  <input
+                    type="text"
+                    value={vaga.tipo}
                     className="form-control"
-                    name="senioridade"
-                    id="floatingsenioridade"
-                    value={vaga.senioridade}
+                    name="tipo"
+                    id="floatingInput"
+                    placeholder="Digite o tipo"
                     onChange={handleFieldsChange}
-                  >
-                    <option value="junior">Junior</option>
-                    <option value="pleno">pleno</option>
-                    <option value="senior">senior</option>
-                  </select>
-                  <label htmlFor="floatingsenioridade">Senioridade</label>
+                  />
+                  <label htmlFor="floatingInput">Tipo</label>
                 </div>
               </div>
-            </div>
+              </div>
             <div className="row">
               <div className="col">
                 <button className="btn btn-success" type="submit">
@@ -127,6 +125,7 @@ const Edicao = (props) => {
                 </button>
                 <button className="btn btn-outline-default">Voltar</button>
               </div>
+            </div>
             </div>
           </form>
         </div>
