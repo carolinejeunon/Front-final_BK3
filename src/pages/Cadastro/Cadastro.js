@@ -104,7 +104,7 @@ const Cadastro = (props) => {
                 </div>
               </div>
             </div>
-            </div>
+            <div></div>
           </form>
         </div>
       </div>
