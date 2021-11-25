@@ -76,7 +76,7 @@ const Edicao = (props) => {
               <div className="col">
                 <div className="form-floating">
                   <input
-                    type="text"
+                    type="date"
                     value={vaga.lancamento}
                     className="form-control"
                     name="lancamento"
