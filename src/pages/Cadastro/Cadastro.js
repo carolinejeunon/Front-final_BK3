@@ -13,9 +13,6 @@ const Cadastro = (props) => {
     const desenvolvedora = evento.target.desenvolvedora.value;
     const tipo = evento.target.tipo.value;
 
-    console.log('teste');
-    console.log(nome);
-
     const vaga = {
       nome,
       lancamento,
