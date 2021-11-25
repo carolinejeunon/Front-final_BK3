@@ -4,6 +4,7 @@ const Api = {
   fetchGetById: (id) => fetch(`${Api.apiUrl}/listid/${id}`),
   fetchPost: (acao) => {
     return fetch(`${Api.apiUrl}/add`, {
+      mode: 'no-cors',
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json',
