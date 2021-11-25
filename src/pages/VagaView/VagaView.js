@@ -41,7 +41,7 @@ const VagaView = (props) => {
           <h4 className="text-center">{game.desenvolvedora}</h4>
           <h5 className="text-center">{game.tipo}</h5>
           <div className="btn-group mt-3 w-100 d-flex align-items-center justify-content-center">
-            <Link to={`/update/${game._id}`} className="btn btn-outline-info">
+            <Link to={`/edit/${game._id}`} className="btn btn-outline-info">
               Editar
             </Link>
             <button className="btn btn-outline-danger" onClick={onOpenModal}>
