@@ -14,6 +14,7 @@ const Cadastro = (props) => {
     const tipo = evento.target.tipo.value;
 
     console.log('teste');
+    console.log(nome);
 
     const vaga = {
       nome,
@@ -21,7 +22,7 @@ const Cadastro = (props) => {
       desenvolvedora,
       tipo,
     };
-
+    console.log(vaga);
     try {
       const response = await Api.fetchPost(vaga);
       const result = await response.json();
@@ -91,7 +92,7 @@ const Cadastro = (props) => {
                       className="form-control"
                       name="tipo"
                       id="floatingInput"
-                      placeholder="Digite o do jogo"
+                      placeholder="Digite o tipo do jogo"
                     />
                     <label htmlFor="floatingInput">Tipo</label>
                   </div>
