@@ -58,7 +58,7 @@ const Cadastro = (props) => {
               <div className="col">
                 <div className="form-floating">
                   <input
-                    type="text"
+                    type="date"
                     className="form-control"
                     name="lancamento"
                     id="floatingsalario"
